@@ -74,8 +74,6 @@ const HomeScreen = () => {
   );
 };
 
-
-
 const styles = StyleSheet.create({
   container: {
     flex: 1,
@@ -169,6 +167,7 @@ const styles = StyleSheet.create({
     fontWeight: "bold",
     marginTop: 5,
   },
+  
 });
 
 export default HomeScreen;

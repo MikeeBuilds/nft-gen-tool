@@ -74,8 +74,6 @@ const HomeScreen = () => {
   );
 };
 
-
-
 const styles = StyleSheet.create({
   container: {
     flex: 1,
@@ -162,12 +160,12 @@ const styles = StyleSheet.create({
   bottomBarButton: {
     alignItems: "center",
     justifyContent: "center",
+    
   },
   bottomBarButtonText: {
     color: "#A84AFC",
     fontSize: 12,
     fontWeight: "bold",
-    marginTop: 5,
   },
 });
 

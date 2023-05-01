@@ -74,8 +74,6 @@ const HomeScreen = () => {
   );
 };
 
-
-
 const styles = StyleSheet.create({
   container: {
     flex: 1,
@@ -150,7 +148,7 @@ const styles = StyleSheet.create({
   bottomNavigationBar: {
     flexDirection: "row",
     height: 90,
-    backgroundColor: "#000",
+    backgroundColor: "orange",
     paddingHorizontal: 30,
     justifyContent: "space-between",
     alignItems: "center",
@@ -167,7 +165,6 @@ const styles = StyleSheet.create({
     color: "#A84AFC",
     fontSize: 12,
     fontWeight: "bold",
-    marginTop: 5,
   },
 });
 

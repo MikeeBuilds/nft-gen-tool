@@ -74,8 +74,6 @@ const HomeScreen = () => {
   );
 };
 
-
-
 const styles = StyleSheet.create({
   container: {
     flex: 1,
@@ -127,7 +125,7 @@ const styles = StyleSheet.create({
     paddingVertical: 10,
     paddingHorizontal: 20,
     marginBottom: 10,
-    shadowColor: "#000",
+    shadowColor: "purple",
     shadowOffset: {
       width: 0,
       height: 2,

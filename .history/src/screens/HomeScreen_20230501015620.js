@@ -35,9 +35,9 @@ const HomeScreen = () => {
     >
       <View style={styles.content}>
         <Image source={logo} style={styles.logo} />
-        <Text style={styles.title}>ArtiGen</Text>
+        <Text style={styles.title}>ArtGen</Text>
         <Text style={styles.description}>
-        Unlock endless possibilities for your NFT collection with our ArtiGen tool. 
+        Unlock endless possibilities for your NFT collection with our ArtGen tool. 
         Seamlessly generate unique NFTs from your pre-existing layers without any hassle. 
         Stand out in the crowded NFT market with our powerful tool, designed for creators by creators.
         </Text>
@@ -55,7 +55,7 @@ const HomeScreen = () => {
         </TouchableOpacity>
         <TouchableOpacity style={styles.bottomBarButton}>
           <Ionicons name="settings-outline" size={28} color="#fff" />
-          <Text style={styles.bottomBarButtonText}></Text>
+          <Text style={styles.bottomBarButtonText}>Settings</Text>
         </TouchableOpacity>
       </View>
       <FloatingAction
@@ -73,8 +73,6 @@ const HomeScreen = () => {
     </LinearGradient>
   );
 };
-
-
 
 const styles = StyleSheet.create({
   container: {
@@ -97,9 +95,9 @@ const styles = StyleSheet.create({
   },
   description: {
     fontSize: 18,
+    display: flex,
     fontWeight: "bold",
     color: "#fff",
-
     textAlign: "center",
     marginBottom: 20,
     backgroundColor: "#A84AFC",
@@ -143,13 +141,13 @@ const styles = StyleSheet.create({
     fontWeight: "bold",
   },
   logo: {
-    width: 300,
-    height: 300,
+    width: 200,
+    height: 200,
     resizeMode: "contain",
   },
   bottomNavigationBar: {
     flexDirection: "row",
-    height: 90,
+    height: 60,
     backgroundColor: "#000",
     paddingHorizontal: 30,
     justifyContent: "space-between",
@@ -166,8 +164,6 @@ const styles = StyleSheet.create({
   bottomBarButtonText: {
     color: "#A84AFC",
     fontSize: 12,
-    fontWeight: "bold",
-    marginTop: 5,
   },
 });
 

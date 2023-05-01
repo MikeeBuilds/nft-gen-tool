@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState, } from "react";
 import { StyleSheet, View, Image, Text, TouchableOpacity } from "react-native";
 import { LinearGradient } from "expo-linear-gradient";
 import { Ionicons } from "@expo/vector-icons";
@@ -74,7 +74,17 @@ const HomeScreen = () => {
   );
 };
 
-
+const AnimatedTitle = () => {
+    const [shouldPulse, setShouldPulse] = useState(true);
+  
+    useEffect(() => {
+      const interval = setInterval(() => {
+        setShouldPulse((prev) => !prev);
+      }, 1000);
+  
+      return () => clearInterval(interval);
+    }, []);
+}
 
 const styles = StyleSheet.create({
   container: {
@@ -91,9 +101,12 @@ const styles = StyleSheet.create({
   title: {
     fontSize: 48,
     fontWeight: "bold",
-    color: "#fff",
+    color: shouldPulse ? "#fff" : "#888",
     textAlign: "center",
     marginVertical: 20,
+    textShadowColor: "#000",
+    textShadowOffset: { width: 2, height: 2 },
+    textShadowRadius: 2,
   },
   description: {
     fontSize: 18,

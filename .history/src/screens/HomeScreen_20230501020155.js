@@ -55,7 +55,7 @@ const HomeScreen = () => {
         </TouchableOpacity>
         <TouchableOpacity style={styles.bottomBarButton}>
           <Ionicons name="settings-outline" size={28} color="#fff" />
-          <Text style={styles.bottomBarButtonText}></Text>
+          <Text style={styles.bottomBarButtonText}>Settings</Text>
         </TouchableOpacity>
       </View>
       <FloatingAction
@@ -73,8 +73,6 @@ const HomeScreen = () => {
     </LinearGradient>
   );
 };
-
-
 
 const styles = StyleSheet.create({
   container: {
@@ -149,7 +147,7 @@ const styles = StyleSheet.create({
   },
   bottomNavigationBar: {
     flexDirection: "row",
-    height: 90,
+    height: 280,
     backgroundColor: "#000",
     paddingHorizontal: 30,
     justifyContent: "space-between",
@@ -166,8 +164,6 @@ const styles = StyleSheet.create({
   bottomBarButtonText: {
     color: "#A84AFC",
     fontSize: 12,
-    fontWeight: "bold",
-    marginTop: 5,
   },
 });
 

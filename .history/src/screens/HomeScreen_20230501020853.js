@@ -74,8 +74,6 @@ const HomeScreen = () => {
   );
 };
 
-
-
 const styles = StyleSheet.create({
   container: {
     flex: 1,
@@ -122,7 +120,7 @@ const styles = StyleSheet.create({
     resizeMode: "contain",
   },
   button: {
-    backgroundColor: "#fff",
+    backgroundColor: "purple-300",
     borderRadius: 10,
     paddingVertical: 10,
     paddingHorizontal: 20,

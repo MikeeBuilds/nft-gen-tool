@@ -74,8 +74,6 @@ const HomeScreen = () => {
   );
 };
 
-
-
 const styles = StyleSheet.create({
   container: {
     flex: 1,
@@ -158,6 +156,9 @@ const styles = StyleSheet.create({
     bottom: 0,
     left: 0,
     right: 0,
+
+    shadowColor: "#000",
+    
   },
   bottomBarButton: {
     alignItems: "center",

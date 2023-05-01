@@ -74,8 +74,6 @@ const HomeScreen = () => {
   );
 };
 
-
-
 const styles = StyleSheet.create({
   container: {
     flex: 1,
@@ -150,6 +148,7 @@ const styles = StyleSheet.create({
   bottomNavigationBar: {
     flexDirection: "row",
     height: 90,
+    
     backgroundColor: "#000",
     paddingHorizontal: 30,
     justifyContent: "space-between",

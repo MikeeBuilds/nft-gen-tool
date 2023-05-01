@@ -74,8 +74,6 @@ const HomeScreen = () => {
   );
 };
 
-
-
 const styles = StyleSheet.create({
   container: {
     flex: 1,
@@ -151,6 +149,7 @@ const styles = StyleSheet.create({
     flexDirection: "row",
     height: 90,
     backgroundColor: "#000",
+    
     paddingHorizontal: 30,
     justifyContent: "space-between",
     alignItems: "center",
