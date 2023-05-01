@@ -5,7 +5,10 @@ import HomeScreen from './src/screens/HomeScreen';
 
 export default function App() {
   return (
-      <HomeScreen />
+    <View className="">
+      <Text>NFT GENERATOR TOOL</Text>
+      <StatusBar style="auto" />
+    </View>
   );
 }
 
