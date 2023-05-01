@@ -2,7 +2,6 @@ import React from 'react';
 import { View, Text, StyleSheet, TouchableOpacity, Image } from 'react-native';
 import { LinearGradient } from 'expo-linear-gradient';
 import logo from '../../assets/logo.png';
-import { Ionicons } from '@expo/vector-icons';
 
 const HomeScreen = () => {
   return (
@@ -12,7 +11,7 @@ const HomeScreen = () => {
     >
       <View style={styles.content}>
         <Image source={logo} style={styles.logo} />
-        <Text style={styles.title}>ArtGen</Text>
+        <Text style={styles.title}>NFT Generator Tool</Text>
         <Text style={styles.description}>
           Generate unique NFTs for your digital assets using our tool. Choose from a variety of designs and customize them to your liking.
         </Text>
@@ -20,17 +19,7 @@ const HomeScreen = () => {
           <Text style={styles.buttonText}>Create NFT</Text>
         </TouchableOpacity>
         <TouchableOpacity style={styles.button}>
-          <Text style={styles.buttonText}>Creator Dashboard</Text>
-        </TouchableOpacity>
-      </View>
-      <View style={styles.bottomNavigationBar}>
-        <TouchableOpacity style={styles.bottomBarButton}>
-          <Ionicons name="home-outline" size={28} color="#fff" />
-          <Text style={styles.bottomBarButtonText}>Home</Text>
-        </TouchableOpacity>
-        <TouchableOpacity style={styles.bottomBarButton}>
-          <Ionicons name="settings-outline" size={28} color="#fff" />
-          <Text style={styles.bottomBarButtonText}>Settings</Text>
+          <Text style={styles.buttonText}>Settings</Text>
         </TouchableOpacity>
       </View>
     </LinearGradient>
@@ -50,7 +39,7 @@ const styles = StyleSheet.create({
     paddingHorizontal: 20,
   },
   title: {
-    fontSize: 48,
+    fontSize: 32,
     fontWeight: 'bold',
     color: '#fff',
     textAlign: 'center',
@@ -63,22 +52,11 @@ const styles = StyleSheet.create({
     marginBottom: 20,
   },
   button: {
-    backgroundColor: 'transparent',
-    borderWidth: 2,
-    borderColor: '#fff',
+    backgroundColor: '#007AFF',
     paddingHorizontal: 20,
     paddingVertical: 15,
-    borderRadius: 20,
+    borderRadius: 5,
     marginBottom: 20,
-    opacity: 0.8,
-    shadowColor: 'rgba(0, 0, 0, 0.2)',
-    shadowOffset: {
-      width: 0,
-      height: 5,
-    },
-    shadowOpacity: 1,
-    shadowRadius: 5,
-    elevation: 5, // Required for Android
   },
   buttonText: {
     color: '#fff',
@@ -89,26 +67,6 @@ const styles = StyleSheet.create({
     width: 200,
     height: 200,
     resizeMode: 'contain',
-  },
-  bottomNavigationBar: {
-    flexDirection: 'row',
-    height: 60,
-    backgroundColor: '#000',
-    paddingHorizontal: 30,
-    justifyContent: 'space-between',
-    alignItems: 'center',
-    position: 'absolute',
-    bottom: 0,
-    left: 0,
-    right: 0,
-  },
-  bottomBarButton: {
-    alignItems: 'center',
-    justifyContent: 'center',
-  },
-  bottomBarButtonText: {
-    color: '#fff',
-    fontSize: 12,
   },
 });
 

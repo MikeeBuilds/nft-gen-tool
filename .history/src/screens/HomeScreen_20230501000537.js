@@ -20,7 +20,7 @@ const HomeScreen = () => {
           <Text style={styles.buttonText}>Create NFT</Text>
         </TouchableOpacity>
         <TouchableOpacity style={styles.button}>
-          <Text style={styles.buttonText}>Creator Dashboard</Text>
+          <Text style={styles.buttonText}>Settings</Text>
         </TouchableOpacity>
       </View>
       <View style={styles.bottomNavigationBar}>
