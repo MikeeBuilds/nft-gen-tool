@@ -3,31 +3,9 @@ import { StyleSheet, View, Image, Text, TouchableOpacity } from "react-native";
 import { LinearGradient } from 'expo-linear-gradient';
 import { Ionicons } from '@expo/vector-icons';
 import { FloatingAction } from "react-native-floating-action";
-import Icon from 'react-native-vector-icons/FontAwesome';
-import logo from '../../assets/logo.png';
 
+npx react-native link react-native-vector-icons
 
-const actions = [
-    {
-      text: "Create NFT",
-      icon: <Icon name="file-o" size={20} color="white" />,
-      name: "create_nft",
-      position: 1,
-    },
-    {
-      text: "Settings",
-      icon: <Icon name="cog" size={20} color="white" />,
-      name: "settings",
-      position: 2,
-    },
-    {
-      text: "Profile",
-      icon: <Icon name="user" size={20} color="white" />,
-      name: "profile",
-      position: 3,
-    },
-  ];
-  
 
 const HomeScreen = () => {
   return (

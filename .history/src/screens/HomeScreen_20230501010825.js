@@ -3,9 +3,6 @@ import { StyleSheet, View, Image, Text, TouchableOpacity } from "react-native";
 import { LinearGradient } from 'expo-linear-gradient';
 import { Ionicons } from '@expo/vector-icons';
 import { FloatingAction } from "react-native-floating-action";
-import Icon from 'react-native-vector-icons/FontAwesome';
-import logo from '../../assets/logo.png';
-
 
 const actions = [
     {

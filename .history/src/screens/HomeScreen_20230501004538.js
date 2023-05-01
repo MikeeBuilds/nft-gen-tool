@@ -1,33 +1,9 @@
-import React from "react";
-import { StyleSheet, View, Image, Text, TouchableOpacity } from "react-native";
+import React from 'react';
+import { View, Text, StyleSheet, TouchableOpacity, Image } from 'react-native';
 import { LinearGradient } from 'expo-linear-gradient';
-import { Ionicons } from '@expo/vector-icons';
-import { FloatingAction } from "react-native-floating-action";
-import Icon from 'react-native-vector-icons/FontAwesome';
 import logo from '../../assets/logo.png';
 
-
-const actions = [
-    {
-      text: "Create NFT",
-      icon: <Icon name="file-o" size={20} color="white" />,
-      name: "create_nft",
-      position: 1,
-    },
-    {
-      text: "Settings",
-      icon: <Icon name="cog" size={20} color="white" />,
-      name: "settings",
-      position: 2,
-    },
-    {
-      text: "Profile",
-      icon: <Icon name="user" size={20} color="white" />,
-      name: "profile",
-      position: 3,
-    },
-  ];
-  
+import { Ionicons } from '@expo/vector-icons';
 
 const HomeScreen = () => {
   return (
@@ -58,18 +34,6 @@ const HomeScreen = () => {
           <Text style={styles.bottomBarButtonText}>Settings</Text>
         </TouchableOpacity>
       </View>
-      <FloatingAction
-        actions={actions}
-        onPressItem={(name) => {
-          console.log(`Selected ${name}`);
-        }}
-        color="#A84AFC"
-        distanceToEdge={20}
-        floatingIcon={<Ionicons name="menu" size={28} color="#fff" />}
-        overlayColor="#fff"
-        position="right"
-        showBackground={false}
-      />
     </LinearGradient>
   );
 };
@@ -77,46 +41,51 @@ const HomeScreen = () => {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    alignItems: "center",
-    justifyContent: "space-between",
+    justifyContent: 'center',
+    alignItems: 'center',
   },
   content: {
     flex: 1,
-    justifyContent: "center",
-    alignItems: "center",
+    justifyContent: 'center',
+    alignItems: 'center',
     paddingHorizontal: 20,
   },
   title: {
     fontSize: 48,
-    fontWeight: "bold",
-    color: "#fff",
-    textAlign: "center",
+    fontWeight: 'bold',
+    color: 'black',
+    textAlign: 'center',
     marginVertical: 20,
   },
   description: {
     fontSize: 18,
-    color: "#fff",
-    textAlign: "center",
+    color: 'black',
+    textAlign: 'center',
     marginBottom: 20,
-  },
-  logo: {
-    width: 200,
-    height: 200,
-    resizeMode: "contain",
+    fontWeight: "bold"
   },
   button: {
-    backgroundColor: "#fff",
-    borderRadius: 10,
-    paddingVertical: 10,
+    backgroundColor: '#A84AFC',
+    borderWidth: 2,
+    borderColor: '#A84AFC',
     paddingHorizontal: 20,
-    marginBottom: 10,
+    paddingVertical: 15,
+    borderRadius: 50,
+    marginBottom: 20,
+    shadowColor: '#A84AFC',
+    shadowOffset: {
+      width: 0,
+      height: 5,
+    },
+    shadowOpacity: 0.5,
+    shadowRadius: 10,
+    elevation: 5,
+    alignItems: 'center',
+    justifyContent: 'center',
   },
   buttonText: {
+    color: '#fff',
     fontSize: 18,
-    color: "#FF6B6B",
-    fontWeight: "bold",
-   
-
     fontWeight: 'bold',
   },
   logo: {
@@ -147,5 +116,3 @@ const styles = StyleSheet.create({
 });
 
 export default HomeScreen;
-
-
