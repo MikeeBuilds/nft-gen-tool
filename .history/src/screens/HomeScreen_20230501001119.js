@@ -52,16 +52,15 @@ const styles = StyleSheet.create({
   title: {
     fontSize: 48,
     fontWeight: 'bold',
-    color: 'black',
+    color: '#fff',
     textAlign: 'center',
     marginVertical: 20,
   },
   description: {
     fontSize: 18,
-    color: 'black',
+    color: '#fff',
     textAlign: 'center',
     marginBottom: 20,
-    fontWeight: "bold"
   },
   button: {
     backgroundColor: '#A84AFC',

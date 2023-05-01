@@ -52,35 +52,33 @@ const styles = StyleSheet.create({
   title: {
     fontSize: 48,
     fontWeight: 'bold',
-    color: 'black',
+    color: '#fff',
     textAlign: 'center',
     marginVertical: 20,
   },
   description: {
     fontSize: 18,
-    color: 'black',
+    color: '#fff',
     textAlign: 'center',
     marginBottom: 20,
-    fontWeight: "bold"
   },
   button: {
-    backgroundColor: '#A84AFC',
+    backgroundColor: 'transparent',
     borderWidth: 2,
-    borderColor: '#A84AFC',
+    borderColor: '#fff',
     paddingHorizontal: 20,
     paddingVertical: 15,
-    borderRadius: 50,
+    borderRadius: 20,
     marginBottom: 20,
-    shadowColor: '#A84AFC',
+    opacity: 0.8,
+    shadowColor: 'rgba(0, 0, 0, 0.2)',
     shadowOffset: {
       width: 0,
       height: 5,
     },
-    shadowOpacity: 0.5,
-    shadowRadius: 10,
-    elevation: 5,
-    alignItems: 'center',
-    justifyContent: 'center',
+    shadowOpacity: 1,
+    shadowRadius: 5,
+    elevation: 5, // Required for Android
   },
   buttonText: {
     color: '#fff',
@@ -109,7 +107,7 @@ const styles = StyleSheet.create({
     justifyContent: 'center',
   },
   bottomBarButtonText: {
-    color: '#A84AFC',
+    color: '#',
     fontSize: 12,
   },
 });
