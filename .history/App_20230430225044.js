@@ -4,10 +4,10 @@ import { SafeAreaView } from 'react-navigation';
 
 export default function App() {
   return (
-    <View>
+    <SafeAreaViewView>
       <Text>NFT GENERATOR TOOL</Text>
       <StatusBar style="auto" />
-    </View>
+    </SafeAreaView>
   );
 }
 
