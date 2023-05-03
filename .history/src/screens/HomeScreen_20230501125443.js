@@ -5,11 +5,12 @@ import { Ionicons } from "@expo/vector-icons";
 import { FloatingAction } from "react-native-floating-action";
 import Icon from "react-native-vector-icons/FontAwesome";
 import logo from "../../assets/logo.png";
-
+import Web3Modal from "web3modal";
+import WalletConnectProvider from "@walletconnect/web3-provider";
 
 const actions = [
   {
-    text: "View Contracts",
+    text: "Create NFT",
     icon: <Icon name="file-o" size={20} color="white" />,
     name: "create_nft",
     position: 1,
@@ -29,7 +30,6 @@ const actions = [
 ];
 
 const HomeScreen = () => {
-    
   return (
     <LinearGradient
       colors={["#FF6B6B", "#FFE66D", "#FF6B6B"]}
@@ -43,10 +43,10 @@ const HomeScreen = () => {
         Seamlessly generate unique NFTs from your pre-existing layers without any hassle. 
         Stand out in the crowded NFT market with our powerful tool, designed for creators by creators.
         </Text>
-        <TouchableOpacity style={styles.button} onPress={() => navigation.navigate("CreateNFT")}>
+        <TouchableOpacity style={styles.button}>
           <Text style={styles.buttonText}>Create NFT</Text>
         </TouchableOpacity>
-        <TouchableOpacity style={styles.button} onPress={() => navigation.navigate("CreatorDashboard")}>
+        <TouchableOpacity style={styles.button}>
           <Text style={styles.buttonText}>Creator Dashboard</Text>
         </TouchableOpacity>
       </View>
@@ -75,7 +75,6 @@ const HomeScreen = () => {
     </LinearGradient>
   );
 };
-
 
 
 const styles = StyleSheet.create({

@@ -43,10 +43,10 @@ const HomeScreen = () => {
         Seamlessly generate unique NFTs from your pre-existing layers without any hassle. 
         Stand out in the crowded NFT market with our powerful tool, designed for creators by creators.
         </Text>
-        <TouchableOpacity style={styles.button} onPress={() => navigation.navigate("CreateNFT")}>
+        <TouchableOpacity style={styles.button}>
           <Text style={styles.buttonText}>Create NFT</Text>
         </TouchableOpacity>
-        <TouchableOpacity style={styles.button} onPress={() => navigation.navigate("CreatorDashboard")}>
+        <TouchableOpacity style={styles.button}>
           <Text style={styles.buttonText}>Creator Dashboard</Text>
         </TouchableOpacity>
       </View>
@@ -56,7 +56,7 @@ const HomeScreen = () => {
           <Text style={styles.bottomBarButtonText}>Home</Text>
         </TouchableOpacity>
         <TouchableOpacity style={styles.bottomBarButton}>
-          <Ionicons name="settings-outline" size={28} color="#fff" />
+          <Ionicons name="settings-outline" size={28} color="" />
           <Text style={styles.bottomBarButtonText}></Text>
         </TouchableOpacity>
       </View>
@@ -75,7 +75,6 @@ const HomeScreen = () => {
     </LinearGradient>
   );
 };
-
 
 
 const styles = StyleSheet.create({

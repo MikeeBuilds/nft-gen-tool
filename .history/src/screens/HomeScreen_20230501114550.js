@@ -9,7 +9,7 @@ import logo from "../../assets/logo.png";
 
 const actions = [
   {
-    text: "View Contracts",
+    text: "Create NFT",
     icon: <Icon name="file-o" size={20} color="white" />,
     name: "create_nft",
     position: 1,
@@ -29,7 +29,6 @@ const actions = [
 ];
 
 const HomeScreen = () => {
-    
   return (
     <LinearGradient
       colors={["#FF6B6B", "#FFE66D", "#FF6B6B"]}
@@ -43,10 +42,10 @@ const HomeScreen = () => {
         Seamlessly generate unique NFTs from your pre-existing layers without any hassle. 
         Stand out in the crowded NFT market with our powerful tool, designed for creators by creators.
         </Text>
-        <TouchableOpacity style={styles.button} onPress={() => navigation.navigate("CreateNFT")}>
+        <TouchableOpacity style={styles.button}>
           <Text style={styles.buttonText}>Create NFT</Text>
         </TouchableOpacity>
-        <TouchableOpacity style={styles.button} onPress={() => navigation.navigate("CreatorDashboard")}>
+        <TouchableOpacity style={styles.button}>
           <Text style={styles.buttonText}>Creator Dashboard</Text>
         </TouchableOpacity>
       </View>

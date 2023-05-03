@@ -22,7 +22,7 @@ const actions = [
   },
   {
     text: "Profile",
-    icon: <Icon name="user" size={20} color="white" />,
+    icon: <Icon class name="user" size={20} color="white" />,
     name: "profile",
     position: 3,
   },
@@ -43,10 +43,10 @@ const HomeScreen = () => {
         Seamlessly generate unique NFTs from your pre-existing layers without any hassle. 
         Stand out in the crowded NFT market with our powerful tool, designed for creators by creators.
         </Text>
-        <TouchableOpacity style={styles.button} onPress={() => navigation.navigate("CreateNFT")}>
+        <TouchableOpacity style={styles.button}>
           <Text style={styles.buttonText}>Create NFT</Text>
         </TouchableOpacity>
-        <TouchableOpacity style={styles.button} onPress={() => navigation.navigate("CreatorDashboard")}>
+        <TouchableOpacity style={styles.button}>
           <Text style={styles.buttonText}>Creator Dashboard</Text>
         </TouchableOpacity>
       </View>
@@ -75,7 +75,6 @@ const HomeScreen = () => {
     </LinearGradient>
   );
 };
-
 
 
 const styles = StyleSheet.create({

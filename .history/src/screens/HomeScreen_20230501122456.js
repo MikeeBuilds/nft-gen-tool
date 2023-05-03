@@ -5,11 +5,25 @@ import { Ionicons } from "@expo/vector-icons";
 import { FloatingAction } from "react-native-floating-action";
 import Icon from "react-native-vector-icons/FontAwesome";
 import logo from "../../assets/logo.png";
+import { Web3ModalProvider, useWeb3Modal } from "@web3modal/react";
+import { ethers } from "ethers";
 
+import {
+  StyleSheet,
+  View,
+  Image,
+  Text,
+  TouchableOpacity,
+} from "react-native";
+import { LinearGradient } from "expo-linear-gradient";
+import { Ionicons } from "@expo/vector-icons";
+import { FloatingAction } from "react-native-floating-action";
+import Icon from "react-native-vector-icons/FontAwesome";
+import logo from "../../assets/logo.png";
 
 const actions = [
   {
-    text: "View Contracts",
+    text: "Create NFT",
     icon: <Icon name="file-o" size={20} color="white" />,
     name: "create_nft",
     position: 1,
@@ -29,7 +43,6 @@ const actions = [
 ];
 
 const HomeScreen = () => {
-    
   return (
     <LinearGradient
       colors={["#FF6B6B", "#FFE66D", "#FF6B6B"]}
@@ -39,15 +52,19 @@ const HomeScreen = () => {
         <Image source={logo} style={styles.logo} />
         <Text style={styles.title}>ArtiGen</Text>
         <Text style={styles.description}>
-        Unlock endless possibilities for your NFT collection with our ArtiGen tool. 
-        Seamlessly generate unique NFTs from your pre-existing layers without any hassle. 
-        Stand out in the crowded NFT market with our powerful tool, designed for creators by creators.
+          Unlock endless possibilities for your NFT collection with our ArtiGen
+          tool. Seamlessly generate unique NFTs from your pre-existing layers
+          without any hassle. Stand out in the crowded NFT market with our
+          powerful tool, designed for creators by creators.
         </Text>
-        <TouchableOpacity style={styles.button} onPress={() => navigation.navigate("CreateNFT")}>
+        <TouchableOpacity style={styles.button}>
           <Text style={styles.buttonText}>Create NFT</Text>
         </TouchableOpacity>
-        <TouchableOpacity style={styles.button} onPress={() => navigation.navigate("CreatorDashboard")}>
+        <TouchableOpacity style={styles.button}>
           <Text style={styles.buttonText}>Creator Dashboard</Text>
+        </TouchableOpacity>
+        <TouchableOpacity style={styles.walletButton}>
+          <Text style={styles.buttonText}>Connect Wallet</Text>
         </TouchableOpacity>
       </View>
       <View style={styles.bottomNavigationBar}>
@@ -76,8 +93,6 @@ const HomeScreen = () => {
   );
 };
 
-
-
 const styles = StyleSheet.create({
   container: {
     flex: 1,
@@ -99,6 +114,9 @@ const styles = StyleSheet.create({
   },
   description: {
     fontSize: 18,
+    fontWeight: "bold",
+   
+
     fontWeight: "bold",
     color: "#fff",
 
@@ -170,6 +188,13 @@ const styles = StyleSheet.create({
     fontSize: 12,
     fontWeight: "bold",
     marginTop: 5,
+  },
+  header: {
+    flexDirection: "row",
+    alignItems: "center",
+    justifyContent: "space-between",
+    padding: 20,
+    width: "100%",
   },
 });
 

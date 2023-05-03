@@ -28,55 +28,6 @@ const actions = [
   },
 ];
 
-const HomeScreen = () => {
-    
-  return (
-    <LinearGradient
-      colors={["#FF6B6B", "#FFE66D", "#FF6B6B"]}
-      style={styles.container}
-    >
-      <View style={styles.content}>
-        <Image source={logo} style={styles.logo} />
-        <Text style={styles.title}>ArtiGen</Text>
-        <Text style={styles.description}>
-        Unlock endless possibilities for your NFT collection with our ArtiGen tool. 
-        Seamlessly generate unique NFTs from your pre-existing layers without any hassle. 
-        Stand out in the crowded NFT market with our powerful tool, designed for creators by creators.
-        </Text>
-        <TouchableOpacity style={styles.button} onPress={() => navigation.navigate("CreateNFT")}>
-          <Text style={styles.buttonText}>Create NFT</Text>
-        </TouchableOpacity>
-        <TouchableOpacity style={styles.button} onPress={() => navigation.navigate("CreatorDashboard")}>
-          <Text style={styles.buttonText}>Creator Dashboard</Text>
-        </TouchableOpacity>
-      </View>
-      <View style={styles.bottomNavigationBar}>
-        <TouchableOpacity style={styles.bottomBarButton}>
-          <Ionicons name="home-outline" size={28} color="#fff" />
-          <Text style={styles.bottomBarButtonText}>Home</Text>
-        </TouchableOpacity>
-        <TouchableOpacity style={styles.bottomBarButton}>
-          <Ionicons name="settings-outline" size={28} color="#fff" />
-          <Text style={styles.bottomBarButtonText}></Text>
-        </TouchableOpacity>
-      </View>
-      <FloatingAction
-        actions={actions}
-        onPressItem={(name) => {
-          console.log(`Selected ${name}`);
-        }}
-        color="#A84AFC"
-        distanceToEdge={20}
-        floatingIcon={<Ionicons name="menu" size={28} color="#fff" />}
-        overlayColor="#fff"
-        position="right"
-        showBackground={false}
-      />
-    </LinearGradient>
-  );
-};
-
-
 
 const styles = StyleSheet.create({
   container: {

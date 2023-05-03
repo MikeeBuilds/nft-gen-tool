@@ -5,11 +5,29 @@ import { Ionicons } from "@expo/vector-icons";
 import { FloatingAction } from "react-native-floating-action";
 import Icon from "react-native-vector-icons/FontAwesome";
 import logo from "../../assets/logo.png";
+import { Web3ModalProvider, useWeb3Modal } from "@web3modal/react";
+import { ethers } from "ethers";
+
+
+const connectWallet = async () => {
+    const providerOptions = {};
+    const web3Modal = new Web3Modal({
+      network: "mainnet",
+      cacheProvider: true,
+      providerOptions,
+    });
+    const provider = await web3Modal.connect();
+    const signer = provider.getSigner();
+    const address = await signer.getAddress();
+    console.log("Address:", address);
+    // You can now use the provider and signer objects to interact with the blockchain
+  };
+  
 
 
 const actions = [
   {
-    text: "View Contracts",
+    text: "Create NFT",
     icon: <Icon name="file-o" size={20} color="white" />,
     name: "create_nft",
     position: 1,
@@ -29,7 +47,6 @@ const actions = [
 ];
 
 const HomeScreen = () => {
-    
   return (
     <LinearGradient
       colors={["#FF6B6B", "#FFE66D", "#FF6B6B"]}
@@ -43,22 +60,21 @@ const HomeScreen = () => {
         Seamlessly generate unique NFTs from your pre-existing layers without any hassle. 
         Stand out in the crowded NFT market with our powerful tool, designed for creators by creators.
         </Text>
-        <TouchableOpacity style={styles.button} onPress={() => navigation.navigate("CreateNFT")}>
-          <Text style={styles.buttonText}>Create NFT</Text>
-        </TouchableOpacity>
-        <TouchableOpacity style={styles.button} onPress={() => navigation.navigate("CreatorDashboard")}>
-          <Text style={styles.buttonText}>Creator Dashboard</Text>
-        </TouchableOpacity>
-      </View>
-      <View style={styles.bottomNavigationBar}>
-        <TouchableOpacity style={styles.bottomBarButton}>
-          <Ionicons name="home-outline" size={28} color="#fff" />
-          <Text style={styles.bottomBarButtonText}>Home</Text>
-        </TouchableOpacity>
-        <TouchableOpacity style={styles.bottomBarButton}>
-          <Ionicons name="settings-outline" size={28} color="#fff" />
-          <Text style={styles.bottomBarButtonText}></Text>
-        </TouchableOpacity>
+        <View style={styles.header}>
+  <Image source={logo} style={styles.logo} />
+  <Text style={styles.title}>ArtiGen</Text>
+  <TouchableOpacity style={styles.button}>
+    <Text style={styles.buttonText}>Create NFT</Text>
+  </TouchableOpacity>
+  <TouchableOpacity style={styles.button}>
+    <Text style={styles.buttonText}>Creator Dashboard</Text>
+  </TouchableOpacity>
+  <TouchableOpacity style={styles.button} onPress={connectWallet}>
+    <Icon name="connectdevelop" size={20} color="white" />
+    <Text style={styles.buttonText}>Connect Wallet</Text>
+  </TouchableOpacity>
+</View>
+
       </View>
       <FloatingAction
         actions={actions}
